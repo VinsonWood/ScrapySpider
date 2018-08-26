@@ -92,4 +92,4 @@ ITEM_PIPELINES = {
 
 LOG_LEVEL= 'DEBUG'
 
-IMAGES_STORE='E:/'
+IMAGES_STORE='/root/webdisk/spider'
