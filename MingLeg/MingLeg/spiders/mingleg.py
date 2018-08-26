@@ -28,6 +28,8 @@ class MinglegSpider(scrapy.Spider):
         next_page = response.xpath('//span[@class="current"]/following-sibling::a[1]/@href').extract_first()
         if next_page is not None:
             logging.info('获取下一页成功' + next_page)
+            if next_page == 'https://www.mingleg.com/page/404':
+                next_page = 'https://www.mingleg.com/page/405'
             yield scrapy.Request(next_page, callback=self.parse, dont_filter=True, cookies=self.cookies)
 
     def page_detail(self, response):
