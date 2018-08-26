@@ -1,4 +1,7 @@
 [[source]]
+#tsinghua
+url = "https://pypi.tuna.tsinghua.edu.cn/simple"
+#其他
 url = "https://pypi.org/simple"
 verify_ssl = true
 name = "pypi"
@@ -6,6 +9,11 @@ name = "pypi"
 [packages]
 scrapy = "*"
 #twisted = {path = "./Twisted-18.7.0-cp37-cp37m-win_amd64.whl"}
+#selenium = "*"
+#aiohttp = "*"
+#cchardet = "*"
+#aiodns = "*"
+pillow = "*"
 
 [dev-packages]
 

@@ -108,3 +108,5 @@ venv.bak/
 
 
 *.lock
+*.whl
+*.json
