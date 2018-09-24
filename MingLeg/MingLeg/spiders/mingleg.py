@@ -10,13 +10,12 @@ class MinglegSpider(scrapy.Spider):
     # start_urls = ['https://www.mingleg.com/page/' + str(x) for x in range(1, 1063, 1)]
     start_urls = ['https://www.mingleg.com/']
     cookies = {
-        'wordpress_sec_20cfa294bb93a749d1b63f30c2e794b9': 'varshonwood%7C1536362156%7Cj94PSkVsVDhCIPCwUd2VJG2u1YQ0QdDPwn0qTf89ciN%7C7c84743f6cff38a80a206f7452705aae658aa96faafe01f41c886279f32b4899',
-        'swpm_session': 'f12c5ca08c94a133c9c2ed4f403e0482', 'swpm_in_use': 'swpm_in_use',
-        'Hm_lvt_c7b9263bd8f9b5b87b3e0e88548b3bea': '1534006826,1535026151,1535026811,1535106977',
-        'wordpress_test_cookie': 'WP+Cookie+check',
-        'simple_wp_membership_sec_20cfa294bb93a749d1b63f30c2e794b9': 'varshonwood%7C1536362156%7Cfb7951e3fede5438782b00f616804cf5',
-        'wordpress_logged_in_20cfa294bb93a749d1b63f30c2e794b9': 'varshonwood%7C1536362156%7Cj94PSkVsVDhCIPCwUd2VJG2u1YQ0QdDPwn0qTf89ciN%7C844def3a4daa678ec604f69f7523b0e1e809e17c2d8a66c23050662746229b03',
-        'Hm_lpvt_c7b9263bd8f9b5b87b3e0e88548b3bea': '1535152559'}
+        'swpm_session': 'a0729f55f646f2ee1bf85f628c2e4549',
+        'Hm_lvt_c7b9263bd8f9b5b87b3e0e88548b3bea': '1537708130,1537749333,1537749536,1537750646',
+        'swpm_in_use': 'swpm_in_use',
+        'simple_wp_membership_sec_20cfa294bb93a749d1b63f30c2e794b9': 'varshonwood%7C1538960567%7C4509ef06f8902c924ca464e8491c7638',
+        'wordpress_logged_in_20cfa294bb93a749d1b63f30c2e794b9': 'varshonwood%7C1538960567%7Ci03brlZaNCZUO3U2U2RE9JBW3cXmHZtuPSgVpKjzeL8%7C2064a19080d8cc18152dfd8e3e76ed2605dcae5b91409255b63dd982396c0c97',
+        'Hm_lpvt_c7b9263bd8f9b5b87b3e0e88548b3bea': '1537751095'}
 
     def parse(self, response):
         for detail_url in response.xpath('//article/header/h1/a/@href').extract():
